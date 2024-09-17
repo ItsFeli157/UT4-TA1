@@ -1,5 +1,4 @@
 import { Card } from "./components/card";
-import styles from './components/card.module.css';
 
 function App() {
   const cardsData = [
@@ -30,16 +29,9 @@ function App() {
 
   
   return (
-    <div className="cards-container">
+    <div>
       {cardsData.map((card, index) => (
-        <Card key={index}>
-          <h3>{card.title}</h3>
-          <p>{card.description}</p> 
-          <p>
-            {card.assignedTo}
-          </p>
-          <p>{card.startDate} to {card.endDate}</p>
-        </Card>
+        <Card key={index} title={card.title} description={card.description} assignedTo={card.assignedTo} startDate={card.startDate} endDate={card.endDate} />
       ))}
     </div>
   )
