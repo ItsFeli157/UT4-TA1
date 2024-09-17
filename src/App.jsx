@@ -1,20 +1,47 @@
-import { Card } from './components/card'
+import { Card } from "./components/card";
 
 function App() {
-
   const cardsData = [
-    { title: 'Título 1', description: 'Description blablabla', assignedTo: 'pepito', startDate: '10/02/2004', endDate: '11/09/2024' },
-    { title: 'Título 2', description: 'Description blablabla2', assignedTo: 'pepito2', startDate: '10/02/2005', endDate: '11/09/2024' },
-    { title: 'Título 3', description: 'Description blablabla3', assignedTo: 'pepito3', startDate: '10/02/2006', endDate: '11/09/2024' }
-  ]
+    {
+      title: "Titulo 1",
+      description: "descripcion...",
+      assignedTo: "ususrio1",
+      startDate: "15/05/2010",
+      endDate: "16/09/2024",
+    },
 
+    {
+      title: "Titulo 2",
+      description: "descripcion...",
+      assignedTo: "usuario2",
+      startDate: "15/04/2004",
+      endDate: "16/09/2024",
+    },
+
+    {
+      title: "Titulo 3",
+      description: "descripcion...",
+      assignedTo: "usuario3",
+      startDate: "19/05/2006",
+      endDate: "16/09/2024",
+    },
+  ];
+
+  
   return (
     <div>
       {cardsData.map((card, index) => (
-        <Card key={index} title={card.title} description={card.description} assignedTo={card.assignedTo} startDate={card.startDate} endDate={card.endDate} />
+        <Card
+          key={index}
+          title={card.title}
+          description={card.description}
+          assignedTo={card.assignedTo}
+          startDate={card.startDate}
+          endDate={card.endDate}
+        />
       ))}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
